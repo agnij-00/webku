@@ -139,51 +139,6 @@ http://www.templatemo.com/tm-466-cafe-house
          </div>  
       </div>
    </footer> <!-- Footer content-->  
-   <!-- JS -->
-   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
-   <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
-   <script>
-      /* Google map
-      ------------------------------------------------*/
-      var map = '';
-      var center;
-
-      function initialize() {
-        var mapOptions = {
-          zoom: 16,
-          center: new google.maps.LatLng(-7.779684, 110.415708),
-          scrollwheel: false
-        };
-        
-        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
-        var marker = new google.maps.Marker({
-         position: new google.maps.LatLng(-7.779684, 110.415708),
-         map: map,
-         title: 'SMA Negeri 8 Yogyakarta'
-        });
-
-        google.maps.event.addDomListener(map, 'idle', function() {
-          calculateCenter();
-        });
-        
-        google.maps.event.addDomListener(window, 'resize', function() {
-          map.setCenter(center);
-        });
-      }
-
-      function calculateCenter() {
-        center = map.getCenter();
-      }
-
-      function loadGoogleMap(){
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
-        document.body.appendChild(script);
-      }
-      $(document).ready(function(){                
-        loadGoogleMap();                
-      });
-      </script>
+  
     </body>
     </html>
