@@ -151,11 +151,16 @@ http://www.templatemo.com/tm-466-cafe-house
       function initialize() {
         var mapOptions = {
           zoom: 16,
-          center: new google.maps.LatLng(13.758468,100.567481),
+          center: new google.maps.LatLng(-7.779684, 110.415708),
           scrollwheel: false
         };
         
         map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+        var marker = new google.maps.Marker({
+         position: new google.maps.LatLng(-7.779684, 110.415708),
+         map: map,
+         title: 'SMA Negeri 8 Yogyakarta'
+        });
 
         google.maps.event.addDomListener(map, 'idle', function() {
           calculateCenter();
